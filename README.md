@@ -12,8 +12,8 @@ Opening a volume:
 
 Configure flag and magic checking:
 
-	>>> volume.ignore_flags = False
-	>>> volume.ignore_magic = False
+    >>> volume.ignore_flags = False
+    >>> volume.ignore_magic = False
 
 Iterating over directory entries:
 
@@ -65,9 +65,9 @@ Reading the contents of an inode:
 
     >>> symbolic_link = root.get_inode("example_symlink")
     >>> symbolic_link.open_read().read().decode("utf8")
-	'example_dir/example_image.jpg'
+    'example_dir/example_image.jpg'
 
 Getting a list of all extended attributes:
 
-	>>> list(example_dir.xattrs())
-	[('user.example_attrib', b'some value'), ('security.unsecure', b'maybe')]
+    >>> list(example_dir.xattrs())
+    [('user.example_attrib', b'some value'), ('security.unsecure', b'maybe')]
